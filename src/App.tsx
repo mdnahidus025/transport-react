@@ -7,6 +7,7 @@ import ScrollToTop from './components/elements/ScrollToTop';
 import SearchProp from './components/elements/SearchProp';
 import SideBar from './components/elements/SideBar';
 import MobileNav from './components/elements/MobileNav';
+import ChatPopup from './components/elements/ChatPopup';
 
 const App: React.FC = () => {
   const { isMobileManu, isSearch, showVideoPopup } = useTransportContext();
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <SideBar />
       <MobileNav />
       <SearchProp />
+      <ChatPopup />
       <ScrollToTop />
       {showVideoPopup && <VideoPopup />}
     </div>

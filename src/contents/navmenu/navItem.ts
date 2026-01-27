@@ -17,7 +17,7 @@ export const pagesList: MenuItem[] = [
   { id: 4, text: "Project Details", url: "/project-details" },
   { id: 5, text: "Testimonials", url: "/testimonials" },
   { id: 6, text: "Pricing", url: "/pricing" },
-  { id: 7, text: "FAQs", url: "/faq" },
+  { id: 7, text: "FAQs", url: "/faqs" },
   { id: 8, text: "404 Error", url: "/404" },
 ];
 

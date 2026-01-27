@@ -10462,6 +10462,7 @@ Error Page
 }
 
 .page-header__bg {
+  background-image: url("../images/backgrounds/page-header-bg.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -10614,6 +10615,7 @@ Error Page
 }
 
 .pricing-one__shape-1 {
+  background-image: url("../images/shapes/pricing-one-shape-1.png") ;
   position: absolute;
   top: 0;
   left: 0;
@@ -10633,6 +10635,7 @@ Error Page
 }
 
 .pricing-one__shape-2 {
+   background-image: url("../images/shapes/pricing-one-shape-2.png") ;
   position: absolute;
   top: 0;
   left: 0;
@@ -18092,6 +18095,25 @@ Sliding Text One
 .team-details__progress-list li+li {
   margin-top: 20px;
 }
+
+.team-details__progress-list li .team-details__progress .progressWrapper {
+  background-color: rgb(6, 47, 58, 0.1);
+  border-radius: 5px;
+}
+.team-details__progress-list li .team-details__progress .progressWrapper .barContainer {
+   
+  border-radius: 5px;
+}
+
+.team-details__progress-list li .team-details__progress span{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 15px;
+  color: #FD5523;
+  font-weight: bold;
+}
+
 
 .team-details__progress {
   position: relative;

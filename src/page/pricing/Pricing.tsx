@@ -1,33 +1,13 @@
-
-
-import TextAnimation from '../../components/elements/TextAnimation';
-import FadeInAdvanced from '../../components/elements/FadeInAdvanced';
+import React from 'react';
 import { Link } from 'react-router';
+import FadeInAdvanced from '../../components/elements/FadeInAdvanced';
 import { pricingData } from '../../contents/pricing/pricingData';
 
-export default function PricingTwo() {
+
+const Pricing: React.FC = () => {
     return (
-        <section className="pricing-one">
+        <section className="pricing-one pricing-page">
             <div className="container">
-                <div className="section-title text-center sec-title-animation animation-style2">
-                    <div className="section-title__tagline-box">
-                        <span className="section-title__tagline-border"></span>
-                        <div className="section-title__shape-1">
-                            <i className="fas fa-plane"></i>
-                        </div>
-                        <h6 className="section-title__tagline">Pricing Plan</h6>
-                        <span className="section-title__tagline-border"></span>
-                        <div className="section-title__shape-2">
-                            <i className="fas fa-plane"></i>
-                        </div>
-                    </div>
-                    <h3 className="section-title__title">
-                        <TextAnimation animationStyle="style2">
-                            Our Effective and Affordable
-                            <br /> <span>Pricing Plans</span>
-                        </TextAnimation>
-                    </h3>
-                </div>
                 <div className="row">
                     {pricingData.map((plan) => (
                         <div key={plan.id} className="col-xl-4 col-lg-4">
@@ -75,4 +55,6 @@ export default function PricingTwo() {
             </div>
         </section>
     );
-}
+};
+
+export default Pricing;

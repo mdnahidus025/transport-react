@@ -4,49 +4,9 @@ import TextAnimation from '../../components/elements/TextAnimation';
 import CounterUp from '../../components/elements/CounterUp';
 import FadeInAdvanced from '../../components/elements/FadeInAdvanced';
 import { useState } from 'react';
+import { faqDataOne, type FaqItem } from '../../contents/faqs/Faqs';
 
-export interface FaqItem {
-    id: number;
-    question: string;
-    answer: string;
-}
-const faqData: FaqItem[] = [
-    {
-        id: 1,
-        question: "How do you handle returns or exchanges?",
-        answer: `We help businesses bring ideas to life in the digital world designing &
-            implementing the technology tools that they need to win. We help
-            business bring ideas to life in the digital wor`,
-    },
-    {
-        id: 2,
-        question: "What does business consulting do?",
-        answer: `We help businesses bring ideas to life in the digital world designing &
-            implementing the technology tools that they need to win. We help
-            business bring ideas to life in the digital wor`,
-    },
-    {
-        id: 3,
-        question: "Can I cancel a shipment after it's been booked?",
-        answer: `We help businesses bring ideas to life in the digital world designing &
-            implementing the technology tools that they need to win. We help
-            business bring ideas to life in the digital wor`,
-    },
-    {
-        id: 4,
-        question: "Can you assist with customs clearance procedures?",
-        answer: `We help businesses bring ideas to life in the digital world designing &
-            implementing the technology tools that they need to win. We help
-            business bring ideas to life in the digital wor`,
-    },
-    {
-        id: 5,
-        question: "What is your delivery policy?",
-        answer: `We help businesses bring ideas to life in the digital world designing &
-            implementing the technology tools that they need to win. We help
-            business bring ideas to life in the digital wor`,
-    },
-];
+
 export default function FaqOne() {
     const [activeFaq, setActiveFaq] = useState<number>(2)
     return (
@@ -94,33 +54,32 @@ export default function FaqOne() {
                             <div className="faq-one__right">
                                 <div className="accrodion-grp faq-one-accrodion" >
                                     {
-                                        faqData.map((item: FaqItem) => (
-                                            <div className={`accrodion ${activeFaq === item.id ? 'active' : ''}`} key={item.id}>
-                                                <FadeInAdvanced
-                                                    variant={'fadeInRight'}
-                                                    delay={100}
-                                                    duration={1500}
-                                                    className={``}
-                                                >
-                                                    <div className="accrodion-title" onClick={() => setActiveFaq(item?.id)}>
-                                                        <h4>{item?.question}</h4>
-                                                    </div>
-                                                    <motion.div
-                                                        initial={{ y: -40, opacity: 0 }}
-                                                        whileInView={{ y: 0, opacity: 1 }}
-                                                        transition={{
-                                                            duration: 0.5,
-                                                            ease: "easeOut"
-                                                        }}
-                                                        viewport={{ amount: 0.05 }}
+                                        faqDataOne.map((item: FaqItem) => (
+                                            <FadeInAdvanced
+                                                key={item.id}
+                                                variant={'fadeInRight'}
+                                                delay={item?.id * 100}
+                                                duration={300}
+                                                className={`accrodion ${activeFaq === item.id ? 'active' : ''}`}
+                                            >
+                                                <div className="accrodion-title" onClick={() => setActiveFaq(item?.id)}>
+                                                    <h4>{item?.question}</h4>
+                                                </div>
+                                                <motion.div
+                                                    initial={{ y: -40, opacity: 0 }}
+                                                    whileInView={{ y: 0, opacity: 1 }}
+                                                    transition={{
+                                                        duration: 0.5,
+                                                        ease: "easeOut"
+                                                    }}
+                                                    viewport={{ amount: 0.05 }}
 
-                                                        className="accrodion-content" style={{ display: `${activeFaq === item.id ? 'block' : 'none'}` }}>
-                                                        <div className="inner">
-                                                            <p>{item?.answer}</p>
-                                                        </div>{/* /.inner */}
-                                                    </motion.div>
-                                                </FadeInAdvanced>
-                                            </div>
+                                                    className="accrodion-content" style={{ display: `${activeFaq === item.id ? 'block' : 'none'}` }}>
+                                                    <div className="inner">
+                                                        <p>{item?.answer}</p>
+                                                    </div>{/* /.inner */}
+                                                </motion.div>
+                                            </FadeInAdvanced>
                                         ))
                                     }
                                 </div>
