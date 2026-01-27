@@ -3689,6 +3689,7 @@ xs sidebar
 }
 
 .banner-two__pattern {
+  background-image: url("../images/shapes/banner-two-pattern.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -3773,6 +3774,7 @@ xs sidebar
   cursor: pointer;
   border-radius: var(--tanspot-bdr-radius);
   z-index: 1;
+  margin-right: 5px;
 }
 
 .banner-two__tab-box .tab-buttons .tab-btn:before {
@@ -7335,7 +7337,8 @@ Brand One
   position: relative;
   display: block;
 }
-.contact-one__progress-single .progress-box .progressWrapper .barContainer{
+
+.contact-one__progress-single .progress-box .progressWrapper .barContainer {
   border-radius: 10px !important;
 }
 
@@ -11092,9 +11095,11 @@ Error Page
 .project-one__bottom .container {
   max-width: 1730px;
 }
-.project-one__bottom .container .swiper{
+
+.project-one__bottom .container .swiper {
   overflow: visible;
-} 
+}
+
 .project-one__single {
   position: relative;
   display: block;
@@ -11816,6 +11821,7 @@ Quote One
 }
 
 .tab-content-box-item-img {
+  background-image: url("../images/backgrounds/quote-bg-1.jpg");
   position: absolute;
   top: -161px;
   right: -60px;
@@ -11826,6 +11832,10 @@ Quote One
   background-position: center center;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.tab-content-box-item-img.bg_2 {
+  background-image: url("../images/backgrounds/quote-bg-2.jpg");
 }
 
 .quote-tab-content-box-item .quotes-wrapper {
@@ -17171,6 +17181,7 @@ Product Description
   width: auto;
   z-index: 100;
 }
+
 /* .main-slider .swiper .swiper-pagination */
 /* #main-slider-pagination::before { */
 #main-slider-pagination::before {
@@ -17266,6 +17277,11 @@ Sliding Text One
   flex-wrap: wrap;
   flex-wrap: nowrap;
   width: fit-content;
+}
+
+.sliding-text-one__wrap .marquee_mode-1 .rfm-marquee-container {
+  overflow: hidden !important;
+  padding: 10px 0;
 }
 
 .sliding-text__list li {
@@ -18869,6 +18885,10 @@ Sliding Text One
   mix-blend-mode: soft-light;
 }
 
+.testimonial-two-shape__bg.bg_testimonials_three {
+  background-image: url("../images/shapes/testimonial-two-shape-bg.png");
+}
+
 .testimonial-three__main-content {
   position: relative;
   display: block;
@@ -20324,8 +20344,13 @@ Why Choose Two
 
 
 
+.mobileManulist li ul li.current a {
+  color: #FD5523 !important;
+}
 
-
+.mobileManulist li.current a {
+  color: #FD5523 !important;
+}
 
 
 

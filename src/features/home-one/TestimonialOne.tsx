@@ -93,7 +93,7 @@ export default function TestimonialOne() {
                                                             <div className="col-xl-5 col-lg-5">
                                                                 <div className="testimonial-one__left">
                                                                     <div className="testimonial-one__img">
-                                                                        <img src={testimonial?.image} />
+                                                                        <img src={testimonial?.image} alt='Image' />
                                                                     </div>
                                                                 </div>
                                                             </div>

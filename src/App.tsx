@@ -6,6 +6,7 @@ import VideoPopup from './components/elements/VideoPopup';
 import ScrollToTop from './components/elements/ScrollToTop';
 import SearchProp from './components/elements/SearchProp';
 import SideBar from './components/elements/SideBar';
+import MobileNav from './components/elements/MobileNav';
 
 const App: React.FC = () => {
   const { isMobileManu, isSearch, showVideoPopup } = useTransportContext();
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <CustomCursor enabled />
       <Outlet />
       <SideBar />
+      <MobileNav />
       <SearchProp />
       <ScrollToTop />
       {showVideoPopup && <VideoPopup />}
