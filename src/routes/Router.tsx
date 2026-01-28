@@ -6,9 +6,15 @@ import SuspenseWrapper from '../components/elements/SuspenseWrapper';
 import HomeTwoLayout from '../layout/HomeTwoLayout';
 import HomeThreeLayout from '../layout/HomeThreeLayout';
 import DefaultLayout from '../layout/DefaultLayout';
-import ErrorPage from '../page/error/ErrorPage';
+import ErrorPage from '../page/error/ErrorPage';   
 
-
+const EmergencyTransport = lazy(() => import('../page/emergency-transport/EmergencyTransport'));
+const WarehouseFacility = lazy(() => import('../page/warehouse-facility/WarehouseFacility'));
+const OceanTransport = lazy(() => import('../page/ocean-transport/OceanTransport'));
+const PersonalDelivery = lazy(() => import('../page/personal-delivery/PersonalDelivery'));
+const TrackTransport = lazy(() => import('../page/track-transport/TrackTransport'));
+const InternationlaTransport = lazy(() => import('../page/international-transport/InternationlaTransport'));
+const Services = lazy(() => import('../page/services/Services'));
 const Testimonials = lazy(() => import('../page/testimonials/Testimonials'));
 const Faqs = lazy(() => import('../page/faqs/Faqs'));
 const Pricing = lazy(() => import('../page/pricing/Pricing'));
@@ -92,6 +98,34 @@ const ROUTER = createBrowserRouter([
                     {
                         path: "faqs",
                         element: <Faqs />
+                    },
+                    {
+                        path: "services",
+                        element: <Services />
+                    },
+                    {
+                        path: "/international-transport",
+                        element: <InternationlaTransport />
+                    },
+                    {
+                        path: "/track-transport",
+                        element: <TrackTransport />
+                    },
+                    {
+                        path: "/personal-delivery",
+                        element: <PersonalDelivery />
+                    },
+                    {
+                        path: "/ocean-transport",
+                        element: <OceanTransport />
+                    },
+                    {
+                        path: "/warehouse-facility",
+                        element: <WarehouseFacility />
+                    },
+                    {
+                        path: "/emergency-transport",
+                        element: <EmergencyTransport />
                     },
                 ]
             }
