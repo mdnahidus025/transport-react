@@ -1,15 +1,11 @@
 
-import Blog21 from '../../assets/images/blog/blog-2-1.jpg';
-import BlogOneAuthorImg1 from '../../assets/images/blog/blog-one-author-img-1.jpg';
-import Blog22 from '../../assets/images/blog/blog-2-2.jpg';
-import BlogOneAuthorImg2 from '../../assets/images/blog/blog-one-author-img-2.jpg';
-import Blog23 from '../../assets/images/blog/blog-2-3.jpg';
-import BlogOneAuthorImg3 from '../../assets/images/blog/blog-one-author-img-3.jpg';
 import TextAnimation from '../../components/elements/TextAnimation';
 import FadeInAdvanced from '../../components/elements/FadeInAdvanced';
 import { Link } from 'react-router';
+import { blogData } from '../../contents/blog/blogData';
 
 export default function BlogTwo() {
+    const blog = blogData.filter((item) => (item?.id <= 3))
     return (
         <section className="blog-two">
             <div className="container">
@@ -32,165 +28,61 @@ export default function BlogTwo() {
                     </h3>
                 </div>
                 <div className="row">
-                    {/* Blog Two Single Start */}
-                    <div className="col-xl-4 col-lg-6">
+                    {blog.map((post) => (
                         <FadeInAdvanced
-                            variant={'fadeInLeft'}
+                            key={post.id}
+                            variant={post?.id === 1 ? 'fadeInLeft' : post?.id === 2 ? "fadeInUp" : "fadeInRight"}
                             delay={100}
+                            className="col-xl-4 col-lg-6"
                         >
                             <div className="blog-two__single">
                                 <div className="blog-two__img">
-                                    <img src={Blog21} />
+                                    <img src={post.image} alt="blog" />
                                     <div className="blog-two__plus">
-                                        <Link to="/blog-details"><i className="icon-plus"></i></Link>
+                                        <Link to={post.slug}><i className="icon-plus"></i></Link>
                                     </div>
                                     <div className="blog-two__tag">
-                                        <Link to="/blog-details">Logistics</Link>
+                                        <Link to={post.slug}>{post.category}</Link>
                                     </div>
                                 </div>
                                 <div className="blog-two__content">
                                     <ul className="blog-two__meta list-unstyled">
                                         <li>
-                                            <Link to="/blog-details">
-                                                <span className="fas fa-calendar-alt"></span>May 10, 2025
+                                            <Link to={post.slug}>
+                                                <span className="fas fa-calendar-alt"></span>{post.date}
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/blog-details">
+                                            <Link to={post.slug}>
                                                 <span className="fas fa-comments"></span>Comment
                                             </Link>
                                         </li>
                                     </ul>
-                                    <h3 className="blog-two__title"><Link to="/blog-details">Grow Your Following by the
-                                        Building Cargo Service</Link></h3>
+                                    <h3 className="blog-two__title">
+                                        <Link to={post.slug}>{post.title}</Link>
+                                    </h3>
                                     <div className="blog-two__author-and-btn">
                                         <div className="blog-two__author-info">
                                             <div className="blog-two__author-img-box">
                                                 <div className="blog-two__author-img">
-                                                    <img src={BlogOneAuthorImg1} />
+                                                    <img src={post.authorImage} alt="author" />
                                                 </div>
                                             </div>
                                             <div className="blog-two__author-content">
-                                                <h5>Janes Cooper</h5>
-                                                <p>May 10, 2025</p>
+                                                <h5>{post.authorName}</h5>
+                                                <p>{post.date}</p>
                                             </div>
                                         </div>
                                         <div className="blog-two__arrow-box">
-                                            <Link to="/blog-details" className="blog-two__arrow"><span
-                                                className="icon-right-arrow"></span></Link>
+                                            <Link to={post.slug} className="blog-two__arrow">
+                                                <span className="icon-right-arrow"></span>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </FadeInAdvanced>
-                    </div>
-                    {/* Blog Two Single End */}
-                    {/* Blog Two Single Start */}
-                    <div className="col-xl-4 col-lg-6">
-                        <FadeInAdvanced
-                            variant={'fadeInUp'}
-                            delay={300}
-                        >
-                            <div className="blog-two__single">
-                                <div className="blog-two__img">
-                                    <img src={Blog22} />
-                                    <div className="blog-two__plus">
-                                        <Link to="/blog-details"><i className="icon-plus"></i></Link>
-                                    </div>
-                                    <div className="blog-two__tag">
-                                        <Link to="/blog-details">Logistics</Link>
-                                    </div>
-                                </div>
-                                <div className="blog-two__content">
-                                    <ul className="blog-two__meta list-unstyled">
-                                        <li>
-                                            <Link to="/blog-details">
-                                                <span className="fas fa-calendar-alt"></span>May 10, 2025
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/blog-details">
-                                                <span className="fas fa-comments"></span>Comment
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                    <h3 className="blog-two__title"><Link to="/blog-details">Cargo Follow Through the Best
-                                        Supply Your Metal</Link></h3>
-                                    <div className="blog-two__author-and-btn">
-                                        <div className="blog-two__author-info">
-                                            <div className="blog-two__author-img-box">
-                                                <div className="blog-two__author-img">
-                                                    <img src={BlogOneAuthorImg2} />
-                                                </div>
-                                            </div>
-                                            <div className="blog-two__author-content">
-                                                <h5>Kevin Cooper</h5>
-                                                <p>May 10, 2025</p>
-                                            </div>
-                                        </div>
-                                        <div className="blog-two__arrow-box">
-                                            <Link to="/blog-details" className="blog-two__arrow"><span
-                                                className="icon-right-arrow"></span></Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </FadeInAdvanced>
-                    </div>
-                    {/* Blog Two Single End */}
-                    {/* Blog Two Single Start */}
-                    <div className="col-xl-4 col-lg-6">
-                        <FadeInAdvanced
-                            variant={'fadeInRight'}
-                            delay={500}
-                        >
-                            <div className="blog-two__single">
-                                <div className="blog-two__img">
-                                    <img src={Blog23} />
-                                    <div className="blog-two__plus">
-                                        <Link to="/blog-details"><i className="icon-plus"></i></Link>
-                                    </div>
-                                    <div className="blog-two__tag">
-                                        <Link to="/blog-details">Logistics</Link>
-                                    </div>
-                                </div>
-                                <div className="blog-two__content">
-                                    <ul className="blog-two__meta list-unstyled">
-                                        <li>
-                                            <Link to="/blog-details">
-                                                <span className="fas fa-calendar-alt"></span>May 10, 2025
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/blog-details">
-                                                <span className="fas fa-comments"></span>Comment
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                    <h3 className="blog-two__title"><Link to="/blog-details">How Will You Know Success
-                                        When it Show Up?</Link></h3>
-                                    <div className="blog-two__author-and-btn">
-                                        <div className="blog-two__author-info">
-                                            <div className="blog-two__author-img-box">
-                                                <div className="blog-two__author-img">
-                                                    <img src={BlogOneAuthorImg3} />
-                                                </div>
-                                            </div>
-                                            <div className="blog-two__author-content">
-                                                <h5>Alisa Fox</h5>
-                                                <p>May 10, 2025</p>
-                                            </div>
-                                        </div>
-                                        <div className="blog-two__arrow-box">
-                                            <Link to="/blog-details" className="blog-two__arrow"><span
-                                                className="icon-right-arrow"></span></Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </FadeInAdvanced>
-                    </div>
-                    {/* Blog Two Single End */}
+                    ))}
                 </div>
             </div>
         </section>

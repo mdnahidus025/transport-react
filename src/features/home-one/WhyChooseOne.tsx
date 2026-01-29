@@ -176,11 +176,20 @@ const WhyChooseOne: React.FC = () => {
                                                                 value={valueRange}
                                                                 onChange={(e) => setValueRange(Number(e.target.value))}
                                                                 style={{
-                                                                    background: `linear-gradient(to right, #ffb51d ${percentage}%, #ddd ${percentage}%)`,
+                                                                    // 1. Removes default browser styling
+                                                                    WebkitAppearance: 'none',
+                                                                    appearance: 'none',
                                                                     width: '100%',
+                                                                    height: '8px',
+                                                                    borderRadius: '5px',
+                                                                    outline: 'none',
+                                                                    // 2. Your dynamic gradient
+                                                                    background: `linear-gradient(to right, #FD5523 ${percentage}%, #ddd ${percentage}%)`
                                                                 }}
+                                                                // Use a className or styled-component to target the thumb handle
+                                                                className="custom-range-slider"
                                                             />
-                                                            <div className="ranger-min-max-block"> 
+                                                            <div className="ranger-min-max-block">
                                                                 <span className="min">{min}</span>
                                                                 <span>-</span>
                                                                 <span>{valueRange}</span>

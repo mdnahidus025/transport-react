@@ -10615,7 +10615,7 @@ Error Page
 }
 
 .pricing-one__shape-1 {
-  background-image: url("../images/shapes/pricing-one-shape-1.png") ;
+  background-image: url("../images/shapes/pricing-one-shape-1.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -10635,7 +10635,7 @@ Error Page
 }
 
 .pricing-one__shape-2 {
-   background-image: url("../images/shapes/pricing-one-shape-2.png") ;
+  background-image: url("../images/shapes/pricing-one-shape-2.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -13360,9 +13360,10 @@ Product
 
 .product__price-ranger .price-ranger .ranger-min-max-block input {
   display: inline-block;
+  width: 100%;
 }
 
-.product__price-ranger .price-ranger .ranger-min-max-block input[type="submit"] {
+.product__price-ranger .price-ranger .ranger-min-max-block .valuRange button {
   position: relative;
   display: block;
   background: var(--tanspot-black);
@@ -13378,6 +13379,40 @@ Product
   padding: 5px 20px;
   border-radius: 20px;
   letter-spacing: 0.1em;
+}
+
+.car-listing__price-ranger .price-ranger .ranger-min-max-block .valuRange .values span {
+  position: relative;
+  display: inline-block;
+  color: var(--gorent-gray);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  left: -2px;
+}
+
+/* Styling the handle for Chrome, Safari, Edge, and Opera */
+.custom-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #FD5523;
+  /* Matching your theme color */
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the handle for Firefox */
+.custom-range-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #FD5523;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 .product__price-ranger .price-ranger .ranger-min-max-block input[type="text"] {
@@ -14307,7 +14342,7 @@ Product
   margin-right: 0;
 }
 
-.styled-pagination li a {
+.styled-pagination li button {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -14325,25 +14360,25 @@ Product
   z-index: 1;
 }
 
-.styled-pagination li:hover a,
-.styled-pagination li.active a {
+.styled-pagination li:hover button,
+.styled-pagination li.active button {
   color: var(--tanspot-white);
   background: var(--tanspot-base);
   border-color: var(--tanspot-base);
 }
 
-.styled-pagination li.prev a,
-.styled-pagination li.next a {
+.styled-pagination li.prev button,
+.styled-pagination li.next button {
   border-radius: 50%;
   color: rgba(var(--tanspot-gray-rgb), .50);
 }
 
-.styled-pagination li.prev a:hover,
-.styled-pagination li.next a:hover {
+.styled-pagination li.prev button:hover,
+.styled-pagination li.next button:hover {
   color: var(--tanspot-white);
 }
 
-.styled-pagination li a span:before {
+.styled-pagination li button span:before {
   position: relative;
   top: 0px;
   color: rgba(var(--tanspot-gray-rgb), .50);
@@ -14353,8 +14388,8 @@ Product
   transition-delay: 0.1s;
 }
 
-.styled-pagination li a:hover span:before,
-.styled-pagination li.active a span:before {
+.styled-pagination li button:hover span:before,
+.styled-pagination li.active button span:before {
   color: var(--tanspot-white);
 }
 
@@ -18100,12 +18135,13 @@ Sliding Text One
   background-color: rgb(6, 47, 58, 0.1);
   border-radius: 5px;
 }
+
 .team-details__progress-list li .team-details__progress .progressWrapper .barContainer {
-   
+
   border-radius: 5px;
 }
 
-.team-details__progress-list li .team-details__progress span{
+.team-details__progress-list li .team-details__progress span {
   position: absolute;
   top: 10px;
   right: 0;
@@ -20376,7 +20412,30 @@ Why Choose Two
 
 
 
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+  background-color: #dddddd !important;
+  padding: 10px 17px 10px 17px;
+  border-radius: 70%;
+}
 
+.custom-arrow.next {
+  right: 10px;
+  background: #ffffff ; 
+}
+
+.custom-arrow.prev {
+  left: 10px;
+  background: #ffffff;
+}
+.mb8{
+  padding-top: 10px;
+}
 
 
 
