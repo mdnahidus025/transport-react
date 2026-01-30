@@ -10,9 +10,10 @@ import ErrorPage from '../page/error/ErrorPage';
 import SignUp from '../page/authentication/SignUp';
 import Login from '../page/authentication/Login';
 import ErrorBoundary from '../components/elements/ErrorBoundary';
-import HomeOneSinglePageLayout from '../layout/HomeOneSinglePageLayout';
-import HomeTwoSinglePageLayout from '../layout/HomeTwoSinglePageLayout';
-import HomeThreeSinglePageLayout from '../layout/HomeThreeSinglePageLayout';
+
+const HomeOneSinglePageLayout = lazy(() => import('../layout/HomeOneSinglePageLayout'));
+const HomeTwoSinglePageLayout = lazy(() => import('../layout/HomeTwoSinglePageLayout')); 
+const HomeThreeSinglePageLayout = lazy(() => import('../layout/HomeThreeSinglePageLayout'));  
 
 const Contact = lazy(() => import('../page/contact/Contact'));
 const BlogDetails = lazy(() => import('../page/blog-details/BlogDetails'));

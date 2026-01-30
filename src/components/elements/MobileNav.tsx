@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import useTransportContext from '../context/useTransportContext';
 import Logo from "../../assets/images/resources/logo-3.png"
 import MobileManuList from './MobileManuList';
+import SinglePageManuList from '../menu/SinglePageManuList';
 const MobileNav: React.FC = () => {
     const { isMobileManu, setIsMobileManu } = useTransportContext();
-    // const currentPath = useLocation().pathname;
-    // const isOnePage = currentPath.includes("one-page")
+    const currentPath = useLocation().pathname;
+    const isOnePage = currentPath.includes("single-page")
 
     return (
         <div className={`mobile-nav__wrapper ${isMobileManu ? "expanded" : ""}`}>
@@ -21,7 +22,10 @@ const MobileNav: React.FC = () => {
                     </Link>
                 </div>
                 <div className="mobile-nav__container">
-                    <MobileManuList />
+                    {
+                        isOnePage ? <SinglePageManuList /> : <MobileManuList />
+                    }
+
                 </div>
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>

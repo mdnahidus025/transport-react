@@ -28,7 +28,7 @@ const singlePageMenuListHomeThree: SinglePageMenuItem[] = [
 type ScrollToSection = (id: string) => void;
 
 const SinglePageManuList: React.FC = () => {
-    const { activeSection } = useTransportContext();
+    const { activeSection, setIsMobileManu } = useTransportContext();
     const currentPath = useLocation().pathname;
     const scrollToSection: ScrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -44,10 +44,11 @@ const SinglePageManuList: React.FC = () => {
         <ul className="main-menu__list one-page-scroll-menu">
             {
                 (currentPath === "/single-page-home-three" ? singlePageMenuListHomeThree : singlePageMenuListHomeOne).map((item: SinglePageMenuItem) => (
-                    <li className={`scrollToLink ${activeSection === item?.linkId ? "current" : ""}`}>
+                    <li key={item?.id} className={`scrollToLink ${activeSection === item?.linkId ? "current" : ""}`}>
                         <Link to={`#${item?.linkId}`} onClick={(e) => {
                             e.preventDefault();
                             scrollToSection(item.linkId);
+                            setIsMobileManu(false)
                         }}>{item?.value}</Link>
                     </li>
                 ))
