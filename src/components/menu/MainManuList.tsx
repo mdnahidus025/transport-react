@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
 import type { MenuItem } from '../../contents/navmenu/navType';
-import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem';
+import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem'; 
+import SinglePageManuList from './SinglePageManuList';
 
-
-const MainManuList: React.FC = () => {
+ 
+const MainManuList: React.FC = () => { 
     const currentPath = useLocation().pathname;
     const findLocation = (array: MenuItem[]): boolean => {
         return array.some(item => item?.url === currentPath);
     };
-    // const isOnePage = currentPath.includes("one-page")
+    const isSinglePage = currentPath.includes("single-page")
+
+    if (isSinglePage) {
+        return <SinglePageManuList />
+    }
 
     return (
         <ul className="main-menu__list">

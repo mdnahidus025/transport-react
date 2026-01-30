@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react"; 
+import { useEffect, useState, useCallback, useLayoutEffect } from "react";
 import { useLocation } from "react-router";
 function throttle<T extends (...args: unknown[]) => void>(
     fn: T,
@@ -27,10 +27,10 @@ const ScrollToTop = () => {
     }, []);
     const location = useLocation();
 
-    // Scroll to top when route changes
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
     }, [location.pathname]);
+
     useEffect(() => {
         const throttledScroll = throttle(toggleVisibility, 200);
 

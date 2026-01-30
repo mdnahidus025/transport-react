@@ -11,7 +11,7 @@ import { Link } from 'react-router';
 
 export default function BlogOne() {
     return (
-        <section className="blog-one">
+        <section className="blog-one" id='blog'>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">

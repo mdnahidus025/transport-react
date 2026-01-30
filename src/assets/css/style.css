@@ -8253,6 +8253,7 @@ Error Page
   display: block;
   background: var(--tanspot-white);
   padding: 120px 0px 120px;
+  border-top: 1px solid rgba(var(--tanspot-black-rgb), .15);
   z-index: 1;
 }
 
@@ -18666,8 +18667,9 @@ Sliding Text One
   position: relative;
   display: block;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 60px 0px rgba(18, 20, 31, 0.08);
+  box-shadow: none;
   border-radius: 20px;
+  border: 1px solid rgba(var(--tanspot-black-rgb), .10);
   z-index: 1;
 
 }
@@ -19321,9 +19323,9 @@ Sliding Text One
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 240px;
-  height: 240px;
-  line-height: 240px;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
   text-align: center;
   font-size: 30px;
   color: var(--tanspot-white);
@@ -19348,8 +19350,8 @@ Sliding Text One
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 240px;
-  height: 240px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -20426,139 +20428,49 @@ Why Choose Two
 
 .custom-arrow.next {
   right: 10px;
-  background: #ffffff ; 
+  background: #ffffff;
 }
 
 .custom-arrow.prev {
   left: 10px;
   background: #ffffff;
 }
-.mb8{
+
+.mb8 {
   padding-top: 10px;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Custom Bullet Colors */
+.swiper-pagination-bullets {
+  position: relative;
+  margin-top: 40px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(var(--tanspot-base-rgb), 0.50);
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--tanspot-base);
+  opacity: 1;
+  width: 40px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.services-one .swiper {
+  overflow: visible;
+}
+
+.services-two .swiper {
+  overflow: visible;
+}
 
 
 

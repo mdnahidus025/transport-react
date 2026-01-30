@@ -71,7 +71,7 @@ const servicesData: ServiceItemTwo[] = [
 
 export default function ServicesTwo() {
     return (
-        <section className="services-two">
+        <section className="services-two" id='services'>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">

@@ -81,7 +81,7 @@ export default function ProjectTwo() {
     const [index, setIndex] = useState<number>(0);
     const images: string[] = projects.map(project => project.image);
     return (
-        <section className="project-one project-two">
+        <section className="project-one project-two" id='projects'>
             <div className="project-one__bg-color">
                 <FadeInAdvanced
                     variant={'slideInRight'}

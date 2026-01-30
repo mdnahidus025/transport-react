@@ -86,7 +86,7 @@ const FooterThree: React.FC = () => {
                                         <h3 className="footer-widget-three__title">Our Services</h3>
                                     </div>
                                     <ul className="footer-widget-three__link list-unstyled">
-                                        <li><Link to="/startup-business">Services</Link></li>
+                                        <li><Link to="/services">Services</Link></li>
                                         <li><Link to="/international-transport">World Transport</Link></li>
                                         <li><Link to="/track-transport">Track Transport</Link></li>
                                         <li><Link to="/personal-delivery">Personal Delivery</Link></li>
@@ -150,15 +150,15 @@ const FooterThree: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="site-footer-three__bottom">
+
+            <div className="site-footer-two__bottom">
                 <div className="container">
-                    <div className="site-footer-three__bottom-inner">
-                        <p className="site-footer-three__bottom-text">© 2025
-                            Copyright <Link to="#">tanspot.</Link> | All rights reserved</p>
-                        <ul className="list-unstyled site-footer-three__bottom-menu">
-                            <li><Link to="/about">Privacy & Policy</Link></li>
-                            <li><Link to="/about">Terms of use</Link></li>
-                            <li><Link to="/about">Cookie Policy</Link></li>
+                    <div className="site-footer-two__bottom-inner">
+                        <p className="site-footer-two__bottom-text">© Copywright 2026 by <Link to="#">tanspot</Link> All Rights Reserved.</p>
+                        <ul className="list-unstyled site-footer-two__bottom-menu">
+                            <li><Link to="/contact">Support</Link></li>
+                            <li><Link to="/about">Terms and Condition</Link></li>
+                            <li><Link to="/about">Privacy and Policy</Link></li>
                         </ul>
                     </div>
                 </div>

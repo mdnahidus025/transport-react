@@ -5,7 +5,7 @@ export default function ProcessOne() {
     return (
         <>
             {/*Process One Start */}
-            <section className="process-one">
+            <section className="process-one" >
                 <div className="process-one__map"> </div>
                 <div className="container">
                     <div className="section-title text-center sec-title-animation animation-style2">

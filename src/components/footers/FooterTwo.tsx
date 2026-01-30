@@ -118,7 +118,7 @@ const FooterTwo: React.FC = () => {
             <div className="site-footer-two__bottom">
                 <div className="container">
                     <div className="site-footer-two__bottom-inner">
-                        <p className="site-footer-two__bottom-text">© Copywright 2025 by <Link to="#">tanspot</Link> All Rights Reserved.</p>
+                        <p className="site-footer-two__bottom-text">© Copywright 2026 by <Link to="#">tanspot</Link> All Rights Reserved.</p>
                         <ul className="list-unstyled site-footer-two__bottom-menu">
                             <li><Link to="/contact">Support</Link></li>
                             <li><Link to="/about">Terms and Condition</Link></li>

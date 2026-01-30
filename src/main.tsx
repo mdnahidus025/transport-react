@@ -7,11 +7,14 @@ import './assets/css/combined.css'
 import ContextProvider from './components/context/ContextProvider.tsx';
 import { RouterProvider } from 'react-router';
 import ROUTER from './routes/Router.tsx';
+import ErrorBoundary from './components/elements/ErrorBoundary.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ContextProvider>
-      <RouterProvider router={ROUTER} />
+      <ErrorBoundary name="Global component main">
+        <RouterProvider router={ROUTER} />
+      </ErrorBoundary>
     </ContextProvider>
   </StrictMode>,
 )

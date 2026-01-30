@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 const FeatureThree: React.FC = () => {
     return (
-        <section className="feature-two">
+        <section className="feature-two" id='about'>
             <div className="container">
                 <div className="row">
                     {/*Feature One Single Start*/}

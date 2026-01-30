@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import FooterLogo from '../../assets/images/resources/footer-logo.png'; 
+import FooterLogo from '../../assets/images/resources/footer-logo.png';
 import FadeInAdvanced from '../elements/FadeInAdvanced';
 const FooterOne: React.FC = () => {
     return (
@@ -60,7 +60,7 @@ const FooterOne: React.FC = () => {
                                         <ul className="footer-widget__link list-unstyled">
                                             <li><Link to="/about">About Us</Link></li>
                                             <li><Link to="/projects">Portfolio</Link></li>
-                                            <li><Link to="/faq">Help & FAQs</Link></li>
+                                            <li><Link to="/faqs">Help & FAQs</Link></li>
                                             <li><Link to="/blog">Blog</Link></li>
                                             <li><Link to="/contact">Contact</Link></li>
                                         </ul>
@@ -135,12 +135,14 @@ const FooterOne: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+
             <div className="site-footer__bottom">
                 <div className="container">
                     <div className="site-footer__bottom-inner">
-                        <p className="site-footer__bottom-text">© Copywright 2025 by <a
-                            href="https://themeforest.net/user/dreamlayout">Tanspot.com</a> All Rights
-                            Reserved.</p>
+                        <p className="site-footer__bottom-text">
+                            © Copywright 2026 by <a href="#">Tanspot</a> All Rights Reserved.
+                        </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             <li><Link to="/contact">Support</Link></li>
                             <li><Link to="/about">Terms and Condition</Link></li>
@@ -149,6 +151,7 @@ const FooterOne: React.FC = () => {
                     </div>
                 </div>
             </div>
+
         </footer>
     );
 };

@@ -8,7 +8,7 @@ import { servicesData, type ServiceItem } from '../../contents/services/serviceD
 
 export default function ServicesOne() {
     return (
-        <section className="services-one">
+        <section className="services-one" id='services'>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">

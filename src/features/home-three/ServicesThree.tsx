@@ -5,7 +5,7 @@ import TextAnimation from "../../components/elements/TextAnimation"
 
 export default function ServicesThree() {
     return (
-        <section className="services-three">
+        <section className="services-three" id="services">
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">

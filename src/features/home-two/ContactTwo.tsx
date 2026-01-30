@@ -9,7 +9,7 @@ import Progresbar from '../../components/elements/Progressbar';
 export default function ContactTwo() {
     const { handleVideoClick } = useTransportContext();
     return (
-        <section className="contact-one">
+        <section className="contact-one" id='contact'>
             <div className="contact-one__shape-bg"
                 style={{ backgroundImage: `url(${ContactOneShapeBg})` }}></div>
             <div className="contact-one__bg-img"

@@ -7,7 +7,7 @@ import { blogData } from '../../contents/blog/blogData';
 export default function BlogTwo() {
     const blog = blogData.filter((item) => (item?.id <= 3))
     return (
-        <section className="blog-two">
+        <section className="blog-two" id='blog'>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">

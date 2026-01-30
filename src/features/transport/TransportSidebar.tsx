@@ -12,8 +12,8 @@ const serviceList: ServiceList[] = [
     { id: 2, linkUrl: "/track-transport", text: "Local Track Transport" },
     { id: 3, linkUrl: "/personal-delivery", text: "Fast Personal Delivery" },
     { id: 4, linkUrl: "/ocean-transport", text: "Safe Ocean Transport" },
-    { id: 4, linkUrl: "/warehouse-facility", text: "Safe Ocean Transport" },
-    { id: 4, linkUrl: "/emergency-transport", text: "Emergency Transport" },
+    { id: 5, linkUrl: "/warehouse-facility", text: "Safe Ocean Transport" },
+    { id: 6, linkUrl: "/emergency-transport", text: "Emergency Transport" },
 ]
 const TransportSidebar: React.FC = () => {
     const currentPath: string = useLocation().pathname;

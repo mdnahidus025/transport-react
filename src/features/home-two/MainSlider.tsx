@@ -8,7 +8,7 @@ import MainSliderMap1 from '../../assets/images/shapes/main-slider-map-1.png';
 const MainSlider: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     return (
-        <section className="main-slider">
+        <section className="main-slider" id='home'>
             <div className="swiper-container thm-swiper__slider">
                 <div className="swiper-wrapper">
 

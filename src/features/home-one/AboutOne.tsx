@@ -17,7 +17,7 @@ import useTransportContext from '../../components/context/useTransportContext';
 const AboutOne: React.FC = () => {
     const { handleVideoClick } = useTransportContext();
     return (
-        <section className="about-one">
+        <section className="about-one" id='about'>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6">

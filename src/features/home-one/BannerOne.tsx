@@ -10,7 +10,7 @@ import CounterUp from '../../components/elements/CounterUp';
 
 const BannerOne: React.FC = () => {
     return (
-        <section className="banner-one">
+        <section className="banner-one" id='home'>
             <div className="banner-one__pattern"></div>
             <div className="banner-one__img" >
                 <img src={BannerOneImg1} />

@@ -44,8 +44,9 @@ const WhyChooseOne: React.FC = () => {
     const min: number = 0;
     const max: number = 2000;
     const percentage: number = ((valueRange - min) / (max - min)) * 100;
+
     return (
-        <section className="why-choose-one">
+        <section className="why-choose-one" id="contact">
             <div className="container">
                 <div className="row">
                     {/* LEFT */}
@@ -144,7 +145,7 @@ const WhyChooseOne: React.FC = () => {
                                                 { name: "name", type: "text", placeholder: "Name", icon: "icon-user" },
                                                 { name: "email", type: "email", placeholder: "Email", icon: "icon-email" },
                                                 { name: "phone", type: "text", placeholder: "Phone", icon: "icon-phone-call" },
-                                                { name: "date", type: "text", placeholder: "Date", icon: "icon-calendar", id: "datepicker" },
+                                                { name: "date", type: "date", placeholder: "Date", icon: "icon-calendar", id: "datepicker" },
                                             ].map((field, index) => (
                                                 <div className="col-xl-6 col-lg-6 col-md-6" key={index}>
                                                     <div className="input-box">
@@ -154,9 +155,13 @@ const WhyChooseOne: React.FC = () => {
                                                             placeholder={field.placeholder}
                                                             id={field.id}
                                                         />
-                                                        <div className="icon">
-                                                            <span className={field.icon}></span>
-                                                        </div>
+                                                        {
+                                                            field?.type !== "date" ? <div className="icon">
+                                                                <span className={field.icon}></span>
+                                                            </div>
+                                                                :
+                                                                ""
+                                                        }
                                                     </div>
                                                 </div>
                                             ))}

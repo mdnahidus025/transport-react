@@ -11,7 +11,7 @@ import useTransportContext from '../../components/context/useTransportContext';
 export default function AboutThree() {
     const { handleVideoClick } = useTransportContext();
     return (
-        <section className="about-three">
+        <section className="about-three" id='aboutThree'>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6">

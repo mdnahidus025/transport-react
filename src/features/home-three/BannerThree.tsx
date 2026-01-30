@@ -3,11 +3,12 @@ import BannerTwoMap1 from '../../assets/images/shapes/banner-two-map-1.png';
 import FadeInAdvanced from '../../components/elements/FadeInAdvanced';
 import CustomSelect from '../../components/elements/CustomSelect';
 import SearchTransportForm from './SearchTransportForm';
+import TypingEffect from '../../components/elements/TypingEffect';
 
 const BannerThree: React.FC = () => {
     const [transportType, setTransportType] = useState<string>("road")
     return (
-        <section className="banner-two">
+        <section className="banner-two" id='home'>
             <div className="banner-two__pattern" ></div>
             <div className="banner-two__map-1">
                 <img src={BannerTwoMap1} className="img-bounce" />
@@ -18,8 +19,7 @@ const BannerThree: React.FC = () => {
                         <div className="banner-two__left">
                             <p className="banner-two__sub-title">Specialist In Modern Transportation</p>
                             <h2 className="banner-two__title">Expert & Easy <br /> Transportation <br />
-                                <span className="typed-effect" id="type-1"
-                                    data-strings="Solutions, Provider, Services, Business"></span>
+                                <TypingEffect strings={["Solutions", "Provider", "Services", "Business"]} /> 
                             </h2>
                             <p className="banner-two__text">If you have a parcel and want to know its latest update, then
                                 check the latest update with your parcel ID in the form below. Don't forget to select

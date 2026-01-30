@@ -18,7 +18,7 @@ export default function AboutTwo() {
     return (
         <>
             {/*About Two Start*/}
-            <section className="about-two">
+            <section className="about-two" id='about'>
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
-import TeamDetailsImg1 from '../../assets/images/team/team-details-img-1.jpg'; 
+import TeamDetailsImg1 from '../../assets/images/team/team-details-img-1.jpg';
 import TeamDetaislProgress from './TeamDetaislProgress';
 
 
 const progress: { id: number; title: string; progressValue: number }[] = [
     { id: 1, title: "Product Delivery", progressValue: 80 },
-    { id: 1, title: "Quick Response", progressValue: 95 },
-    { id: 1, title: "Customer Satisfaction", progressValue: 65 },
+    { id: 2, title: "Quick Response", progressValue: 95 },
+    { id: 3, title: "Customer Satisfaction", progressValue: 65 },
 ]
 const MemberDetails: React.FC = () => {
     return (

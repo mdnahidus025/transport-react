@@ -99,7 +99,7 @@ export default function TeamOne() {
     return (
         <>
             {/*Team One Start */}
-            <section className="team-one">
+            <section className="team-one" id='team'>
                 <div className="team-one__shape-1" >
                 </div>
                 <div className="container">

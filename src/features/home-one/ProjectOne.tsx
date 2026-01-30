@@ -79,7 +79,7 @@ export default function ProjectOne() {
     const [index, setIndex] = useState<number>(0);
     const images: string[] = projectsData.map(project => project.img);
     return (
-        <section className="project-one">
+        <section className="project-one" id='projects'>
             <div className="project-one__bg-color">
 
             </div>

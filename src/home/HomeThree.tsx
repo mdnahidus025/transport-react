@@ -16,12 +16,14 @@ import TeamOne from '../features/home-one/TeamOne';
 import FaqOne from '../features/home-one/FaqOne';
 import BlogOne from '../features/home-one/BlogOne';
 import BrandOne from '../features/home-one/BrandOne';
+import AboutThree from '../features/home-three/AboutThree';
 
 const HomeThree: React.FC = () => {
     return (
         <>
             <BannerThree />
             <FeatureThree />
+            <AboutThree />
             <SlidingTextOne />
             <ServicesThree />
             <ProjectOne />

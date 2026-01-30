@@ -59,7 +59,7 @@ const teamDataTwo: TeamTwoItem[] = [
 export default function TeamTwo() {
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     return (
-        <section className="team-two">
+        <section className="team-two" id='team'>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <div className="section-title__tagline-box">
